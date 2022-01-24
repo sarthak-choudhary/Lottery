@@ -18,7 +18,7 @@ def get_account(index=None, id=None):
     if(network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS or network.show_active() in FORKED_LOCAL_ENVIRONMENTS):
         return accounts[0]
     
-    return accounts.add(config["wallets"]["from_key"])
+    return accounts.add(config["wallet"]["from_key"])
 
 contract_to_mock = {
    "eth_usd_price_feed": MockV3Aggregator,
